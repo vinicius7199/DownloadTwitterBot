@@ -5,15 +5,16 @@
   "scripts": {
     "lint": "eslint src handler.js",
     "test": "jasmine",
-    "invoke": "serverless invoke local",
-    "local": "serverless offline --noPrependStageInUrl"
+    "invoke": "npx serverless invoke local",
+    "local": "npx serverless offline --noPrependStageInUrl",
+    "deploy": "npx serverless deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shalvah/DownloadThisVideo.git"
   },
   "engines": {
-    "node": "8.10.0"
+    "node": "18.14.2"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +35,7 @@
     "redis": "^2.8.0",
     "twit": "^2.2.9",
     "twitter-error-handler": "^2.1.0",
+    "twitter-oauth2": "^1.1.0",
     "twittersignin": "^1.0.0"
   },
   "devDependencies": {
@@ -43,7 +45,8 @@
     "mitm": "^1.7.0",
     "mock-require": "^3.0.3",
     "redis-mock": "^0.46.0",
+    "serverless": "^2.72.3",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^6.8.0"
+    "serverless-offline": "^8.8.0"
   }
 }

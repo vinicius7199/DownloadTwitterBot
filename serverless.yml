@@ -48,13 +48,7 @@ provider:
     GTAG_ID: ${env:GTAG_ID}
     AD_CODE: ${env:AD_CODE}
     NODE_ENV: ${env:NODE_ENV}
-    TOPIC_ARN:
-      "Fn::Join":
-      - ':'
-      -
-        - "arn:aws:sns:us-east-1"
-        - Ref: AWS::AccountId
-        - "newMention"
+    TOPIC_ARN: arn:aws:sns:us-east-1:${AWS::AccountId}:newMention
 
 package:
   include:
